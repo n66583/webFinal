@@ -14,15 +14,15 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
  
- if ($_POST["user_name"] == "admin" and $_POST["pass_word"] == "HossainSadeqi66") {
+ if ($_POST["user_name"] == "admin" and $_POST["pass_word"] == "123456") {
  $_SESSION["user_name"] = $_POST["user_name"];
- header('Location: admin/admin.php');
+ header('Location: admin\\admin.php');
  exit();
  }
 
 else if ($_POST["user_name"] == "user" and $_POST["pass_word"] == "P@ssw0rd") {
  $_SESSION["user_name"] = $_POST["user_name"];
- header('Location: user/user.php');
+ header('Location: user\\user.php');
  exit();
  }
  echo "the username or password is incorrect.";
