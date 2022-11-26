@@ -1,0 +1,83 @@
+@charset "UTF-8";
+@font-face {
+    font-family: typicons;
+    src: url(typicons.woff2);/* 0xe067  0xe0a2 0xe0d9*/
+}
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: IRAN;
+}
+h1 {
+    background-color: rgb(73, 73, 73);
+    padding: .3em;
+}
+section {
+    background-color: rgb(43, 43, 43);
+    padding: .5em;
+}
+section a {
+    color: blue;
+    margin: .3em;
+}
+section a:hover {
+    color: red;
+}
+section a:active {
+    color: purple;
+}
+p {
+    margin: 1em;
+    display: none;
+}
+#home:target {
+    display: block;
+}
+#blog:target {
+    display: block;
+}
+#aboutus:target {
+    display: block;
+}
+#contactus:target {
+    display: block;
+}
+select, option {
+    font-family: IRAN;
+    direction: rtl;
+}
+select {
+    position: absolute;
+    right: .5em;
+}
+button {
+    font-size: large;
+    color: black;
+    background-color: rgb(0, 110, 255);
+    display: block;
+    padding: 2px 4px;
+    border-radius: 5px;
+    position: relative;
+    right: 0;
+}
+#finish {
+    display: none;
+}
+#reload {
+    display: none;
+}
+i::before {
+    font-family: typicons;
+    content: attr(data-icon);
+    font-style: normal;
+}
+[href="index.html"] {
+    color: black;
+    text-decoration: none;
+}
+[type="button"] {
+    position: fixed;
+    right: 25px;
+    top: 150px;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Heading</h1>
+    <section>
+        <a href="#home">Home</a>
+        <a href="#blog">Blog</a>
+        <a href="#aboutus">Aboutus</a>
+        <a href="#contactus">Contactus</a>
+        <select name="" id="select">
+            <option disabled>زبان سایت را انتخاب کنید</option>
+            <option value="en-US">انگلیسی</option>
+            <option value="fa-IR">فارسی</option>
+        </select>
+    </section>
+    <p id="home">Hello Every body! Welcome to home!</p>
+    <p id="blog">Hello Every body! Welcome to blog!</p>
+    <p id="aboutus">Hello Every body! Welcome to aboutus!</p>
+    <p id="contactus">Hello Every body! Welcome to contactus!</p>
+    <footer>
+        <button type="button" onclick="Editing()"><i data-icon="&#xe067"></i>Edit</button>
+        <button type="button" onclick="Finish()" id="finish"><i data-icon="&#xe0a2"></i>Finish</button>
+        <button type="button" id="reload"><a href="index.html"><i data-icon="&#xe0d9"></i>reload</a></button>
+    </footer>
+
+    <script>
+        document.getElementById('select').onchange = function() {
+            if (document.getElementById('select').value == "fa-IR") {
+                document.body.style.direction = "rtl";
+                document.getElementById('select').style.right = "initial";
+                document.getElementById('select').style.left = ".5em";
+                document.getElementsByTagName('h1')[0].innerHTML = "عنوان";
+                document.getElementsByTagName('a')[0].innerHTML = "خانه";
+                document.getElementsByTagName('a')[1].innerHTML = "مقاله";
+                document.getElementsByTagName('a')[2].innerHTML = "درباره ما";
+                document.getElementsByTagName('a')[3].innerHTML = "تماس با ما";
+                document.getElementById('home').innerHTML = "سلام دوستان! به خانه خوش آمدید!";
+                document.getElementById('blog').innerHTML = "سلام دوستان! به مقاله خوش آمدید!";
+                document.getElementById('aboutus').innerHTML = "سلام دوستان! به درباره ما خوش آمدید!";
+                document.getElementById('contactus').innerHTML = "سلام دوستان! به تماس با ما خوش آمدید!";
+                document.getElementsByTagName('button')[0].style.left = "25px";
+                document.getElementsByTagName('button')[0].style.top = "150px";
+                document.getElementsByTagName('button')[1].style.left = "25px";
+                document.getElementsByTagName('button')[1].style.top = "150px";
+                document.getElementsByTagName('button')[2].style.left = "25px";
+                document.getElementsByTagName('button')[2].style.top = "150px";
+                // hhh
+                document.getElementsByTagName('button')[0].style.right = "initial";
+                document.getElementsByTagName('button')[1].style.right = "initial";
+                document.getElementsByTagName('button')[2].style.right = "initial";
+            }
+            else if (document.getElementById('select').value == "en-US") {
+                document.body.style.direction = "ltr";
+                document.getElementById('select').style.right = ".5em";
+                document.getElementById('select').style.left = "initial";
+                document.getElementsByTagName('h1')[0].innerHTML = "Heading";
+                document.getElementsByTagName('a')[0].innerHTML = "Home";
+                document.getElementsByTagName('a')[1].innerHTML = "Blog";
+                document.getElementsByTagName('a')[2].innerHTML = "Aboutus";
+                document.getElementsByTagName('a')[3].innerHTML = "Contactus";
+                document.getElementById('home').innerHTML = "Hello Every body! Welcome to home!";
+                document.getElementById('blog').innerHTML = "Hello Every body! Welcome to blog!";
+                document.getElementById('aboutus').innerHTML = "Hello Every body! Welcome to aboutus!";
+                document.getElementById('contactus').innerHTML = "Hello Every body! Welcome to contactus!";
+                document.getElementsByTagName('button')[0].style.right = "25px";
+                document.getElementsByTagName('button')[0].style.top = "150px";
+                document.getElementsByTagName('button')[1].style.right = "25px";
+                document.getElementsByTagName('button')[1].style.top = "150px";
+                document.getElementsByTagName('button')[2].style.right = "25px";
+                document.getElementsByTagName('button')[2].style.top = "150px";
+                // hhhh
+                document.getElementsByTagName('button')[0].style.left = "initial";
+                document.getElementsByTagName('button')[1].style.left = "initial";
+                document.getElementsByTagName('button')[2].style.left = "initial";
+            }
+        }
+        Editing = function() {
+            document.body.contentEditable = "True";
+            document.getElementsByTagName('button')[0].contentEditable = "False";
+            document.getElementsByTagName('button')[1].contentEditable = "False";
+            document.getElementsByTagName('button')[2].contentEditable = "False";
+            document.getElementById('finish').style.display = "block";
+
+        }
+        Finish = function() {
+            document.body.contentEditable = "False";
+            document.getElementById('reload').style.display = "block";
+        }
+    </script>
+</body>
+</html>
